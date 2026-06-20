@@ -1,0 +1,22 @@
+[project]
+name = "ngit"
+version = "0.1.0"
+description = "Clone a Notion database tree to local files."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "notion-client>=2.4.0",
+    "python-dotenv>=1.0.1",
+    "rich>=13.7.1",
+    "typer>=0.12.5",
+]
+
+[project.scripts]
+ngit = "ngit:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+py-modules = ["ngit"]
